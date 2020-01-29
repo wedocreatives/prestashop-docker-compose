@@ -25,6 +25,8 @@ services:
 
   mariadb:
     build: ./docker/mariadb
+    volumes:
+      - ./mariadb:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=prestashop
